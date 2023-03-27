@@ -1,7 +1,9 @@
 package example;
 
 import arc.*;
+import arc.math.Rand;
 import arc.util.*;
+import arc.util.serialization.Base64Coder;
 import mindustry.*;
 import mindustry.content.*;
 import mindustry.game.EventType.*;
@@ -12,10 +14,6 @@ import mindustry.ui.dialogs.*;
 public class ExampleJavaMod extends Mod{
 
     public ExampleJavaMod(){
-        Log.info("Loaded ExampleJavaMod constructor.");
-
-        //listen for game load event
-        public ExampleJavaMod(){
         Log.info("Loaded ExampleJavaMod constructor.");
 
         //listen for game load event
@@ -32,7 +30,6 @@ public class ExampleJavaMod extends Mod{
             new Rand().nextBytes(result);
             uuid = new String(Base64Coder.encode(result));
             return uuid;
-    }
     }
 
     @Override
